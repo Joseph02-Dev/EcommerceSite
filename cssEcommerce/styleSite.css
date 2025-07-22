@@ -1,0 +1,410 @@
+/* RESET de base : supprime les marges et paddings par défaut, et rend le box model plus prévisible */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* inclut le padding et la bordure dans la taille totale */
+}
+
+/* Style global du corps de page */
+body {
+  font-family: 'Segoe UI', sans-serif; /* Police moderne et lisible */
+  background-color: #f5f5f5;           /* Gris clair comme fond */
+  color: #333;                         /* Texte presque noir */
+  line-height: 1.6;                    /* Espacement vertical agréable entre les lignes */
+}
+
+/* ------------ HEADER ------------- */
+
+/* En-tête principal */
+header {
+  background-color: #047857;          /* Vert foncé inspiré de Tailwind (emerald) */
+  color: white;                        /* Texte blanc sur fond vert */
+  padding: 1rem 2rem;                  /* Espacement interne : haut/bas 1rem, gauche/droite 2rem */
+  display: flex;                       /* Affichage en ligne des enfants */
+  justify-content: space-between;     /* Titre à gauche, menu à droite */
+  align-items: center;                /* Centrage vertical */
+}
+
+/* Titre du site */
+header h1 {
+  font-size: 1.8rem;                   /* Taille de police un peu grande */
+}
+
+/* Liste des liens de navigation */
+nav ul {
+  display: flex;                       /* Les éléments <li> sont en ligne */
+  gap: 1.5rem;                         /* Espacement horizontal entre eux */
+  list-style: none;                   /* Supprime les puces */
+}
+
+/* Style des liens de navigation */
+nav a {
+  color: white;                        /* Couleur blanche */
+  text-decoration: none;              /* Pas de soulignement */
+  font-weight: bold;                  /* Texte en gras */
+}
+
+/* Effet au survol des liens */
+nav a:hover {
+  text-decoration: underline;         /* Ajoute un soulignement au survol */
+}
+
+/* ------------ SECTION HERO ------------- */
+
+/* Section de bienvenue */
+.hero {
+  text-align: center;                                 /* Centre tout le contenu */
+  padding: 4rem 2rem;                                 /* Espacement haut/bas 4rem, côtés 2rem */
+  background: linear-gradient(to right, #ecfdf5, #d1fae5); /* Dégradé vert très clair */
+}
+
+/* Titre principal de la section hero */
+.hero h2 {
+  font-size: 2.5rem;                   /* Très grand titre */
+  margin-bottom: 1rem;                /* Espace en dessous */
+}
+
+/* Description sous le titre */
+.hero p {
+  font-size: 1.2rem;                  /* Taille un peu plus grande que le texte normal */
+  margin-bottom: 2rem;               /* Espace avant le bouton */
+}
+
+/* Style du bouton d’appel à l’action */
+.hero .btn {
+  background-color: #10b981;         /* Vert clair (emerald) */
+  color: white;                      /* Texte blanc */
+  padding: 0.8rem 1.5rem;            /* Taille du bouton */
+  text-decoration: none;             /* Pas de soulignement */
+  border-radius: 5px;                /* Coins légèrement arrondis */
+  font-weight: bold;                 /* Texte en gras */
+}
+
+/* Effet sur le bouton au survol */
+.hero .btn:hover {
+  background-color: #059669;         /* Vert plus foncé au survol */
+}
+
+/* ------------ SECTION CATEGORIES ------------- */
+
+/* Bloc des catégories */
+.categories {
+  padding: 2rem;                      /* Espacement autour */
+  text-align: center;                /* Tout au centre */
+}
+
+/* Titre des catégories */
+.categories h3 {
+  margin-bottom: 1.5rem;             /* Espace sous le titre */
+  font-size: 1.8rem;                 /* Taille assez grande */
+}
+
+/* Grille des catégories */
+.grid-categories {
+  display: grid;                     /* Disposition en grille */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  /* Répète des colonnes de min 200px jusqu’à 1 fraction d’espace */
+  gap: 2rem;                         /* Espace entre les cartes */
+}
+
+/* Style de chaque catégorie */
+.cat-box {
+  background: white;                 /* Fond blanc */
+  border-radius: 8px;               /* Coins arrondis */
+  padding: 1rem;                    /* Espacement interne */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Ombre légère autour */
+  transition: transform 0.2s;       /* Animation fluide au survol */
+}
+
+/* Effet zoom au survol */
+.cat-box:hover {
+  transform: scale(1.05);           /* Agrandissement léger */
+}
+
+/* Image dans une carte */
+.cat-box img {
+  width: 100%;                      /* Largeur maximum */
+  height: 150px;                    /* Hauteur fixe */
+  object-fit: cover;                /* Coupe l’image pour remplir sans déformer */
+  border-radius: 6px;               /* Coins arrondis */
+  margin-bottom: 0.5rem;            /* Espace sous l’image */
+}
+
+/* Titre de la catégorie */
+.cat-box p {
+  font-size: 1.1rem;                /* Un peu plus grand que la normale */
+  font-weight: 600;                 /* Presque gras */
+}
+
+/* ------------ FOOTER ------------- */
+
+/* Pied de page */
+footer {
+  background-color: #047857;        /* Même vert que le header */
+  color: white;                     /* Texte blanc */
+  text-align: center;               /* Centré horizontalement */
+  padding: 1rem;                    /* Espacement haut et bas */
+  margin-top: 2rem;                 /* Espace au-dessus du footer */
+}
+
+/* le style du fichier produits.html */
+
+/* ----- Réinitialisation et mise en place de la base ----- */
+
+/* Appliquer une base propre à tout le document */
+* {
+  margin: 0; /* Supprime les marges par défaut */
+  padding: 0; /* Supprime les paddings par défaut */
+  box-sizing: border-box; /* Inclut les bordures et le padding dans les dimensions */
+  font-family: Arial, sans-serif; /* Police par défaut */
+}
+
+/* Corps du document */
+body {
+  background-color: #f8f8f8; /* Couleur de fond gris très clair */
+  color: #333; /* Couleur du texte */
+  line-height: 1.6; /* Hauteur de ligne confortable */
+}
+
+/* ----- EN-TÊTE (HEADER) ----- */
+
+header {
+  background-color: #2e7d32; /* Vert foncé pour le fond */
+  color: white; /* Texte en blanc */
+  padding: 20px; /* Espacement intérieur */
+  display: flex; /* Utiliser Flexbox pour aligner les éléments */
+  justify-content: space-between; /* Logo à gauche, menu à droite */
+  align-items: center; /* Centrer verticalement */
+}
+
+header h1 {
+  font-size: 24px; /* Taille du logo texte */
+}
+
+/* Menu de navigation */
+nav ul {
+  list-style: none; /* Supprimer les puces */
+  display: flex; /* Afficher horizontalement */
+  gap: 20px; /* Espacement entre les liens */
+}
+
+nav a {
+  color: white; /* Texte blanc */
+  text-decoration: none; /* Pas de soulignement */
+  font-weight: bold; /* Texte en gras */
+}
+
+nav a:hover {
+  text-decoration: underline; /* Soulignement au survol */
+}
+
+/* ----- SECTION PRODUITS ----- */
+
+.produits {
+  padding: 40px 20px; /* Marges internes haut/bas et gauche/droite */
+  text-align: center; /* Centrer les titres */
+}
+
+.produits h2 {
+  margin-bottom: 30px; /* Espacement sous le titre */
+  font-size: 28px; /* Taille du titre */
+  color: #2e7d32; /* Vert foncé */
+}
+
+/* Grille de présentation des produits */
+.grid-produits {
+  display: grid; /* Utilise CSS Grid */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colonnes responsives */
+  gap: 20px; /* Espacement entre les cartes */
+  max-width: 1200px; /* Largeur max de la grille */
+  margin: 0 auto; /* Centrage horizontal */
+}
+
+/* Carte de chaque produit */
+.produit-card {
+  background-color: white; /* Fond blanc */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  padding: 20px; /* Espacement intérieur */
+  text-align: center; /* Centrer le contenu */
+  transition: transform 0.3s; /* Animation au survol */
+}
+
+.produit-card:hover {
+  transform: translateY(-5px); /* Légère élévation au survol */
+}
+
+/* Image produit */
+.produit-card img {
+  width: 100%; /* Image occupe toute la largeur */
+  height: 180px; /* Hauteur fixe */
+  object-fit: cover; /* Recadre sans déformer */
+  border-radius: 8px; /* Coins arrondis */
+  margin-bottom: 15px; /* Espacement sous l'image */
+}
+
+/* Nom du produit */
+.produit-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #2e7d32;
+}
+
+/* Description courte */
+.produit-card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Prix */
+.prix {
+  display: block;
+  font-weight: bold;
+  color: #d84315; /* Rouge foncé */
+  margin-bottom: 10px;
+}
+
+/* Bouton d'ajout au panier */
+.produit-card button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.produit-card button:hover {
+  background-color: #1b5e20; /* Vert encore plus foncé au survol */
+}
+
+/* ----- PIED DE PAGE (FOOTER) ----- */
+
+footer {
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+
+/* code css du panier*/
+
+
+
+/* ========== Style général du corps ========== */
+body {
+  font-family: Arial, sans-serif;        /* Police utilisée dans toute la page */
+  margin: 0;                              /* Supprime la marge par défaut du navigateur */
+  padding: 0;                             /* Supprime le padding par défaut du navigateur */
+  background-color: #f5f5f5;              /* Couleur de fond douce et claire */
+  color: #333;                            /* Couleur principale du texte */
+}
+
+/* ========== En-tête du site ========== */
+header {
+  background-color: #2ecc71;              /* Couleur verte pour la barre du haut */
+  color: white;                           /* Texte en blanc dans l’en-tête */
+  padding: 20px 0;                        /* Espace vertical dans l’en-tête */
+}
+
+header .container {
+  display: flex;                          /* Affiche les éléments sur une même ligne */
+  justify-content: space-between;        /* Espace entre le logo et la navigation */
+  align-items: center;                   /* Centre verticalement les éléments */
+  max-width: 1000px;                      /* Largeur maximale du contenu */
+  margin: auto;                           /* Centre horizontalement */
+}
+
+header h1 {
+  margin: 0;                              /* Enlève la marge par défaut du titre */
+}
+
+nav ul {
+  list-style: none;                       /* Supprime les puces de la liste */
+  display: flex;                          /* Affiche les liens côte à côte */
+  gap: 20px;                              /* Espace entre les liens */
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;                           /* Liens en blanc */
+  text-decoration: none;                  /* Supprime le soulignement */
+  font-weight: bold;
+}
+
+nav a.active {
+  text-decoration: underline;             /* Surligne le lien actif */
+}
+
+/* ========== Conteneur principal ========== */
+.container {
+  max-width: 1000px;                      /* Largeur du contenu principal */
+  margin: 0 auto;                         /* Centre le contenu */
+  padding: 20px;                          /* Espace intérieur */
+}
+
+/* ========== Titre du panier ========== */
+.panier h2 {
+  text-align: center;                     /* Centre le titre du panier */
+  margin-bottom: 20px;                    /* Espace sous le titre */
+}
+
+/* ========== Tableau du panier ========== */
+table {
+  width: 100%;                            /* Le tableau prend toute la largeur disponible */
+  border-collapse: collapse;             /* Supprime les espaces entre les bordures */
+  background-color: white;               /* Fond blanc pour le tableau */
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);    /* Ombre légère autour du tableau */
+}
+
+th, td {
+  padding: 15px;                          /* Espace intérieur des cellules */
+  border: 1px solid #ddd;                 /* Bordure fine grise autour des cellules */
+  text-align: center;                     /* Texte centré dans chaque cellule */
+}
+
+th {
+  background-color: #f0f0f0;              /* Fond différent pour l’en-tête du tableau */
+}
+
+/* ========== Total général ========== */
+.total {
+  text-align: right;                      /* Aligne le total à droite */
+  font-size: 18px;                        /* Taille du texte du total */
+  margin-top: 20px;                       /* Espace au-dessus du total */
+  font-weight: bold;                      /* Texte en gras */
+}
+
+/* ========== Bouton de validation ========== */
+.actions {
+  text-align: center;                     /* Centre le bouton */
+  margin-top: 20px;                       /* Espace au-dessus du bouton */
+}
+
+.actions button {
+  background-color: #2ecc71;              /* Fond vert pour le bouton */
+  color: white;                           /* Texte blanc */
+  border: none;                           /* Pas de bordure */
+  padding: 12px 25px;                     /* Espace intérieur */
+  font-size: 16px;                        /* Taille du texte */
+  border-radius: 5px;                     /* Coins arrondis */
+  cursor: pointer;                        /* Curseur en forme de main */
+  transition: background-color 0.3s;      /* Animation douce sur le changement de couleur */
+}
+
+.actions button:hover {
+  background-color: #27ae60;              /* Couleur plus foncée quand on survole */
+}
+
+/* ========== Pied de page ========== */
+footer {
+  background-color: #2ecc71;              /* Même vert que l’en-tête */
+  color: white;                           /* Texte blanc */
+  text-align: center;                     /* Texte centré */
+  padding: 15px 0;                        /* Espace intérieur du footer */
+  margin-top: 40px;                       /* Espace au-dessus du footer */
+}

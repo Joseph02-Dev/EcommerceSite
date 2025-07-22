@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Joe Shop</title>
+  <link rel="stylesheet" href="./cssEcommerce/styleSite.css">
 </head>
 <body>
-    
+     <!--Ici commence l'entete du site-->
+  <header>
+    <img src="" alt="logo du site">
+    <div class="logo">
+      <h1>Joe Shop</h1>
+    </div>
+    <nav><!--Les liens dans la barre de navigation-->
+      <ul>
+        <li><a href="accueil.html">Accueil</a></li>
+        <li><a href="produits.html">Produits</a></li>
+        <li><a href="panier.html">Panier</a></li>
+      </ul>
+    </nav>
+  </header>
+    <!--Ici commence le corps du site-->
+  <main>
+    <section class="hero">
+      <h2>Bienvenue sur Joe Shop</h2>
+      <p>Votre boutique de produits locaux et frais en ligne</p>
+      <a href="produits.html" class="btn">Voir nos produits</a>
+    </section>
+
+    <section class="categories">
+      <h3>Nos Catégories Populaires</h3>
+      <div class="grid-categories">
+        <div class="cat-box">
+          <img src="assets/images/piment.jpg" alt="Piments">
+          <p>Piments</p>
+        </div>
+        <div class="cat-box">
+          <img src="assets/images/legumes.jpg" alt="Légumes">
+          <p>Légumes</p>
+        </div>
+        <div class="cat-box">
+          <img src="assets/images/epices.jpg" alt="Épices">
+          <p>Épices</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Joe Shop - Tous droits réservés</p>
+  </footer>
+
 </body>
 </html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joe Shop</title>
+  <link rel="stylesheet" href="./cssEcommerce/styleSite.css">
+</head>
+<body>
+
+  <!-- En-tête -->
+  <header>
+    <div class="container">
+      <h1>Joe Shop</h1>
+      <nav>
+        <ul>
+          <li><a href="accueil.html">Accueil</a></li>
+          <li><a href="produits.html">Produits</a></li>
+          <li><a href="panier.html" class="active">Panier</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Section Panier -->
+  <main class="container panier">
+    <h2>Votre Panier</h2>
+    
+    <!-- Tableau du panier -->
+    <table>
+      <thead>
+        <tr>
+          <th>Produit</th>
+          <th>Quantité</th>
+          <th>Prix</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Piment rouge</td>
+          <td>2</td>
+          <td>5 000 GNF</td>
+          <td>10 000 GNF</td>
+        </tr>
+        <tr>
+          <td>Tomates fraîches</td>
+          <td>1</td>
+          <td>4 000 GNF</td>
+          <td>4 000 GNF</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Total général -->
+    <div class="total">
+      <strong>Total général :</strong> 14 000 GNF
+    </div>
+
+    <!-- Bouton de validation -->
+    <div class="actions">
+      <button>Valider la commande</button>
+    </div>
+  </main>
+
+  <!-- Pied de page -->
+  <footer>
+    <p>&copy; 2025 Joe Shop - Tous droits réservés</p>
+  </footer>
+
+</body>
+</html>
